@@ -1,6 +1,5 @@
 .custom-input {
-    background-color: #f8f9fa;
-    /* Gris muy claro bootstrap */
+    background-color: #f8f9fa;    
     border: 1px solid #dee2e6;
     color: var(--color-dark);
     padding: 0.75rem 1rem;
@@ -11,8 +10,7 @@
 .custom-input:focus {
     background-color: #fff;
     border-color: var(--color-orchid);
-    box-shadow: 0 0 0 0.25rem rgba(196, 122, 192, 0.25);
-    /* Glow color orquídea */
+    box-shadow: 0 0 0 0.25rem rgba(196, 122, 192, 0.25);    
 }
 
 .custom-input::placeholder {
