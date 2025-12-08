@@ -1,0 +1,89 @@
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="newCosplayModal" tabindex="-1" aria-labelledby="newCosplayModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content dark-modal">
+
+            <!-- Header -->
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title fw-bold text-white" id="newCosplayModalLabel">
+                    <i class="bi bi-stars me-2" style="color: var(--color-orchid);"></i>Nuevo Proyecto
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <!-- Body / Formulario -->
+            <div class="modal-body">
+                <form>
+                    <div class="row g-3">
+                        <!-- Nombre -->
+                        <div class="col-md-12">
+                            <label for="cosplayName"
+                                class="form-label text-white-50 small text-uppercase fw-bold">Nombre del
+                                Personaje</label>
+                            <input type="text" class="form-control dark-input" id="cosplayName"
+                                placeholder="Ej: Juri Han, Leona, Jinx">
+                        </div>
+
+                        <!-- Franquicia -->
+                        <div class="col-md-6">
+                            <label for="franchiseSelect"
+                                class="form-label text-white-50 small text-uppercase fw-bold">Franquicia</label>
+                            <select class="form-select dark-input" id="franchiseSelect">
+                                <option selected>Seleccionar...</option>
+                                <option value="1">Anime</option>
+                                <option value="2">Videojuego</option>
+                                <option value="3">Comic/Manga</option>
+                                <option value="4">Película/Serie</option>
+                                <option value="5">Original</option>
+                            </select>
+                        </div>
+
+                        <!-- Tipo -->
+                        <div class="col-md-6">
+                            <label for="typeSelect" class="form-label text-white-50 small text-uppercase fw-bold">Tipo
+                                de Cosplay</label>
+                            <select class="form-select dark-input" id="typeSelect">
+                                <option selected>Seleccionar...</option>
+                                <option value="1">Completo (Full Armor)</option>
+                                <option value="2">Textil / Costura</option>
+                                <option value="3">Prop / Accesorio</option>
+                                <option value="4">Estilización de Peluca</option>
+                            </select>
+                        </div>
+
+                        <!-- Fecha Límite -->
+                        <div class="col-md-6">
+                            <label for="deadlineDate"
+                                class="form-label text-white-50 small text-uppercase fw-bold">Fecha Límite</label>
+                            <input type="date" class="form-control dark-input" id="deadlineDate">
+                        </div>
+
+                        <!-- Imagen Referencia -->
+                        <div class="col-md-6">
+                            <label for="refImage" class="form-label text-white-50 small text-uppercase fw-bold">Imagen
+                                de Referencia (URL)</label>
+                            <input type="text" class="form-control dark-input" id="refImage" placeholder="https://...">
+                        </div>
+
+                        <!-- Descripción -->
+                        <div class="col-12">
+                            <label for="descriptionText"
+                                class="form-label text-white-50 small text-uppercase fw-bold">Descripción /
+                                Notas</label>
+                            <textarea class="form-control dark-input" id="descriptionText" rows="4"
+                                placeholder="Detalles importantes, materiales necesarios, etc."></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer border-top-0">
+                <button type="button" class="btn btn-outline-light border-0" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn fw-bold px-4"
+                    style="background-color: var(--color-orchid); color: white;">Crear Cosplay</button>
+            </div>
+        </div>
+    </div>
+</div>
