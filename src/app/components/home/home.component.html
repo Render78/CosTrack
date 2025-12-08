@@ -6,7 +6,7 @@
                 Bienvenida de nuevo
             </h6>
             <h1 class="display-5 fw-bold" style="color: var(--color-dark);">
-                ¡Hola, Lucero! ✨
+                ¡Hola, Luesky! ✨
             </h1>
             <p class="lead text-muted">
                 Vamos a organizar esos cosplays increíbles. Tienes <strong style="color: var(--color-purple);">2
@@ -83,7 +83,8 @@
                     <p class="small text-muted mb-0">Comienza una nueva aventura</p>
                 </div>
                 <button class="btn btn-icon rounded-circle shadow-sm"
-                    style="background: var(--color-purple); color: white;">
+                    style="background: var(--color-purple); color: white;" data-bs-toggle="modal"
+                    data-bs-target="#newCosplayModal">
                     <i class="bi bi-plus-lg"></i>
                 </button>
             </div>
@@ -104,3 +105,5 @@
     </div>
 
 </div>
+
+<app-modal-new-cosplay></app-modal-new-cosplay>
