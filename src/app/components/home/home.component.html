@@ -1,0 +1,106 @@
+<div class="container-fluid py-4 px-4 px-lg-5">
+    <!-- Header de Bienvenida -->
+    <div class="row mb-5 align-items-center animate-fade-in">
+        <div class="col-12">
+            <h6 class="text-uppercase tracking-wide mb-1" style="color: var(--color-orchid);">
+                Bienvenida de nuevo
+            </h6>
+            <h1 class="display-5 fw-bold" style="color: var(--color-dark);">
+                ¡Hola, Lucero! ✨
+            </h1>
+            <p class="lead text-muted">
+                Vamos a organizar esos cosplays increíbles. Tienes <strong style="color: var(--color-purple);">2
+                    eventos</strong> cerca.
+            </p>
+        </div>
+    </div>
+
+    <!-- Sección de Estadísticas (Grid) -->
+    <div class="row g-4 mb-5 animate-slide-up">
+        <div class="col-md-6 col-xl-3">
+            <app-stat-card title="En Progreso" value="3 Cosplays" icon="bi-hourglass-split" bgColor="#E39EC1"
+                iconColor="#fff">
+            </app-stat-card>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <app-stat-card title="Próximo Evento" value="15 Días" icon="bi-calendar-check" bgColor="#C47AC0"
+                iconColor="#fff">
+            </app-stat-card>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <app-stat-card title="Tareas Pendientes" value="12 Items" icon="bi-list-check" bgColor="#77567A"
+                iconColor="#fff">
+            </app-stat-card>
+        </div>
+        <div class="col-md-6 col-xl-3">
+            <app-stat-card title="Presupuesto" value="$450.00" icon="bi-currency-dollar" bgColor="#2F323A"
+                iconColor="#fff">
+            </app-stat-card>
+        </div>
+    </div>
+
+    <!-- Sección Principal: Proyecto Actual -->
+    <div class="row mb-4 animate-slide-up" style="animation-delay: 0.1s;">
+        <div class="col-12">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                <div class="card-header bg-white border-0 py-3 px-4 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold mb-0" style="color: var(--color-dark);">Continuar trabajando</h5>
+                    <button class="btn btn-sm btn-outline-secondary rounded-pill">Ver todos</button>
+                </div>
+                <div class="card-body p-4">
+                    <div class="d-flex align-items-center">
+                        <!-- Placeholder de imagen -->
+                        <div class="current-project-img rounded-3 me-4 d-flex align-items-center justify-content-center text-white"
+                            style="background-color: var(--color-orchid); width: 80px; height: 80px; font-size: 2rem;">
+                            <i class="bi bi-stars"></i>
+                        </div>
+
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between mb-1">
+                                <h5 class="fw-bold mb-0">Frieren - Frieren: Beyond Journey's End</h5>
+                                <span class="badge rounded-pill bg-light text-dark border">75%</span>
+                            </div>
+                            <p class="text-muted small mb-2">Próxima tarea: Terminar el báculo</p>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar rounded-pill" role="progressbar"
+                                    style="width: 75%; background-color: var(--color-orchid);" aria-valuenow="75"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accesos Rápidos -->
+    <div class="row g-4 animate-slide-up" style="animation-delay: 0.2s;">
+        <div class="col-md-6">
+            <div class="p-4 rounded-4 quick-action-card d-flex align-items-center justify-content-between"
+                style="background-color: #F8F9FA;">
+                <div>
+                    <h6 class="fw-bold mb-1">Nuevo Cosplay</h6>
+                    <p class="small text-muted mb-0">Comienza una nueva aventura</p>
+                </div>
+                <button class="btn btn-icon rounded-circle shadow-sm"
+                    style="background: var(--color-purple); color: white;">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-4 rounded-4 quick-action-card d-flex align-items-center justify-content-between"
+                style="background-color: #F8F9FA;">
+                <div>
+                    <h6 class="fw-bold mb-1">Registrar Compra</h6>
+                    <p class="small text-muted mb-0">Añade materiales al inventario</p>
+                </div>
+                <button class="btn btn-icon rounded-circle shadow-sm"
+                    style="background: var(--color-pink); color: white;">
+                    <i class="bi bi-cart3"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
