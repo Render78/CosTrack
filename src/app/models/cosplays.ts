@@ -1,7 +1,6 @@
 export interface Cosplays {
     cosplay_id: number;
     name: string;
-    character: string;
     franchise_id: number;
     type_cosplay_id: number;
     status_id: number;
