@@ -1,33 +1,20 @@
-/* Estilos específicos del modal para modo oscuro */
-.dark-modal {
-    background-color: var(--color-purple);
-    /* Un tono ligeramente más claro que el fondo de la app para destacar */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    border-radius: 1rem;
-}
-
-.dark-input {
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
+.custom-input {
+    background-color: #f8f9fa;
+    /* Gris muy claro bootstrap */
+    border: 1px solid #dee2e6;
+    color: var(--color-dark);
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
+    transition: all 0.2s;
 }
 
-.dark-input:focus {
-    background-color: rgba(0, 0, 0, 0.3);
+.custom-input:focus {
+    background-color: #fff;
     border-color: var(--color-orchid);
-    color: white;
     box-shadow: 0 0 0 0.25rem rgba(196, 122, 192, 0.25);
+    /* Glow color orquídea */
 }
 
-.dark-input::placeholder {
-    color: rgba(255, 255, 255, 0.3);
-}
-
-/* Ajuste para invertir el color del icono del calendario en dark mode */
-::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    opacity: 0.6;
+.custom-input::placeholder {
+    color: #adb5bd;
 }
