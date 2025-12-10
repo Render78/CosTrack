@@ -1,0 +1,121 @@
+<!-- 
+      Nota: En una app real con Bootstrap JS, quitarías [class.show] y [style.display].
+      Aquí lo controlo con @Input para que puedas probar la lógica visualmente sin JS de Bootstrap.
+    -->
+<div class="modal fade" [class.show]="isVisible" [style.display]="isVisible ? 'block' : 'none'" tabindex="-1"
+    role="dialog">
+    <div class="modal-backdrop fade show" *ngIf="isVisible" (click)="closeModal()"></div>
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow-lg">
+
+            <!-- Header -->
+            <div class="modal-header text-white border-0">
+                <h5 class="modal-title fw-bold">
+                    <i class="bi bi-stars me-2"></i>Nuevo Cosplay
+                </h5>
+                <button type="button" class="btn-close btn-close-white" (click)="closeModal()"></button>
+            </div>
+
+            <!-- Body / Formulario -->
+            <div class="modal-body p-4">
+                <form>
+
+                    <!-- 1. Nombre -->
+                    <div class="mb-3">
+                        <label class="form-label small text-muted fw-bold">NOMBRE DEL PERSONAJE</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0 text-purple-icon">
+                                <i class="bi bi-person-badge"></i>
+                            </span>
+                            <input type="text" class="form-control bg-light border-start-0 ps-0"
+                                placeholder="Ej. Ahri, 2B, Cloud Strife...">
+                        </div>
+                    </div>
+
+                    <!-- 2. Franquicia y Tipo (Fila) -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label small text-muted fw-bold">FRANQUICIA</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0 text-purple-icon">
+                                    <i class="bi bi-controller"></i>
+                                </span>
+                                <select class="form-select bg-light border-start-0 ps-0">
+                                    <option selected>Seleccionar...</option>
+                                    <option value="1">League of Legends</option>
+                                    <option value="2">Genshin Impact</option>
+                                    <option value="3">Anime</option>
+                                    <option value="4">Videojuegos</option>
+                                    <option value="5">Comics</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small text-muted fw-bold">TIPO</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0 text-purple-icon">
+                                    <i class="bi bi-scissors"></i>
+                                </span>
+                                <select class="form-select bg-light border-start-0 ps-0">
+                                    <option selected>Seleccionar...</option>
+                                    <option value="sewing">Costura (Sewing)</option>
+                                    <option value="armor">Armadura (Armor)</option>
+                                    <option value="prop">Prop / Accesorio</option>
+                                    <option value="wig">Estilizado de Peluca</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Fecha Límite -->
+                    <div class="mb-3">
+                        <label class="form-label small text-muted fw-bold">FECHA LÍMITE (DEADLINE)</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0 text-purple-icon">
+                                <i class="bi bi-calendar-event"></i>
+                            </span>
+                            <input type="date" class="form-control bg-light border-start-0 ps-0">
+                        </div>
+                    </div>
+
+                    <!-- 4. URL Imagen -->
+                    <div class="mb-3">
+                        <label class="form-label small text-muted fw-bold">IMAGEN DE REFERENCIA (URL)</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0 text-purple-icon">
+                                <i class="bi bi-link-45deg"></i>
+                            </span>
+                            <input type="text" class="form-control bg-light border-start-0 ps-0"
+                                placeholder="https://...">
+                        </div>
+                    </div>
+
+                    <!-- 5. Descripción -->
+                    <div class="mb-4">
+                        <label class="form-label small text-muted fw-bold">NOTAS / DESCRIPCIÓN</label>
+                        <div class="input-group">
+                            <span
+                                class="input-group-text bg-light border-end-0 text-purple-icon align-items-start pt-2">
+                                <i class="bi bi-card-text"></i>
+                            </span>
+                            <textarea class="form-control bg-light border-start-0 ps-0" rows="3"
+                                placeholder="Detalles importantes del traje..."></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <div class="modal-footer border-0 pt-0 pb-4 px-4">
+                <button type="button" class="btn btn-outline-secondary rounded-pill px-4"
+                    (click)="closeModal()">Cancelar</button>
+                <button type="button" class="btn btn-save rounded-pill px-4 ms-2">
+                    <i class="bi bi-check-lg me-1"></i> Guardar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
