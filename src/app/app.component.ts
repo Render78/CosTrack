@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { TableListCosplayComponent } from "./components/table-list-cosplay/table-list-cosplay.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, TableListCosplayComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

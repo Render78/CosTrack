@@ -31,7 +31,7 @@
         <a href="#" (click)="selectItem(2); $event.preventDefault()" [class.active]="selectedItemId() === 2"
           class="d-flex align-items-center py-3 px-3 position-relative">
           <i class="bi bi-person-heart fs-5"></i>
-          <span class="ms-3 label-text" *ngIf="!collapsed()">Mis Cosplays</span>
+          <span class="ms-3 label-text" routerLink="/cosplay/list" *ngIf="!collapsed()">Mis Cosplays</span>
           <div class="active-indicator" *ngIf="selectedItemId() === 2"></div>
         </a>
       </li>
@@ -125,5 +125,9 @@
       </div>
     </div>
 
+    <!-- <app-table-list-cosplay></app-table-list-cosplay> -->
+
   </div>
 </div>
+
+<router-outlet></router-outlet>
