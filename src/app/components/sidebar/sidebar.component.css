@@ -2,9 +2,8 @@
     background-color: var(--color-purple);
     width: 260px;
     min-height: 100vh;
-    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
     position: fixed;
-    /* Fija para pantallas grandes */
     z-index: 1000;
 }
 
@@ -16,7 +15,6 @@
     border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Estilos de los Links */
 .nav-link {
     border-radius: 12px;
     padding: 12px 16px;
@@ -25,7 +23,7 @@
     letter-spacing: 0.3px;
 }
 
-/* Estado Activo */
+/* Estado Activo (Cuando estás en la página) */
 .nav-link.active {
     background-color: var(--color-orchid) !important;
     color: white !important;
@@ -36,7 +34,6 @@
 .nav-link:not(.active):hover {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateX(5px);
-    /* Desplazamiento sutil a la derecha */
     color: var(--color-pale) !important;
 }
 
