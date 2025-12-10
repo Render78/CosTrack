@@ -1,0 +1,104 @@
+.text-purple-dark {
+    color: var(--color-purple-main);
+}
+
+.text-purple-main {
+    color: var(--color-purple-light);
+}
+
+/* Botón Nuevo */
+.btn-add {
+    background-color: var(--color-purple-main);
+    color: white;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-add:hover {
+    background-color: var(--color-purple-light);
+    transform: translateY(-1px);
+}
+
+/* Estilos de la Tabla */
+.custom-table thead th {
+    background-color: var(--color-purple-light);
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Bordes redondeados para el header de la tabla */
+.custom-table thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.custom-table thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.custom-table tbody tr {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.custom-table tbody tr:hover {
+    background-color: rgba(239, 217, 206, 0.3);
+    /* Color Cream con transparencia */
+    transform: scale(1.005);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-table td {
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Badges / Etiquetas */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.badge-soft-lilac {
+    background-color: rgba(222, 192, 241, 0.3);
+    color: #8A65C0;
+}
+
+.badge-soft-wisteria {
+    background-color: rgba(183, 156, 237, 0.3);
+    color: var(--color-purple-main);
+}
+
+.bg-processing {
+    background-color: #ffeeba;
+    color: #856404;
+}
+
+.bg-finished {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Botones de acción (Editar/Eliminar) */
+.btn-icon {
+    color: var(--color-wisteria);
+    border: none;
+    background: transparent;
+    padding: 0.3rem;
+}
+
+.btn-icon:hover {
+    color: var(--color-purple-main);
+}
+
+.btn-icon.delete:hover {
+    color: #dc3545;
+}
