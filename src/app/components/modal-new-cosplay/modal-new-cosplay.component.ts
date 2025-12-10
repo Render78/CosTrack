@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
 
 @Component({
   selector: 'app-modal-new-cosplay',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './modal-new-cosplay.component.html',
   styleUrl: './modal-new-cosplay.component.css'
 })

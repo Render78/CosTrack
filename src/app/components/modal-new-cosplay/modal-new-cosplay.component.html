@@ -4,9 +4,11 @@
     -->
 <div class="modal fade" [class.show]="isVisible" [style.display]="isVisible ? 'block' : 'none'" tabindex="-1"
     role="dialog">
+    <!-- Backdrop: Fondo oscuro/borroso -->
     <div class="modal-backdrop fade show" *ngIf="isVisible" (click)="closeModal()"></div>
 
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- Dialog: El formulario en sí. CLASE MODIFICADA A modal-lg (Large) -->
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content border-0 shadow-lg">
 
             <!-- Header -->
@@ -21,21 +23,39 @@
             <div class="modal-body p-4">
                 <form>
 
-                    <!-- 1. Nombre -->
-                    <div class="mb-3">
-                        <label class="form-label small text-muted fw-bold">NOMBRE DEL PERSONAJE</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light border-end-0 text-purple-icon">
-                                <i class="bi bi-person-badge"></i>
-                            </span>
-                            <input type="text" class="form-control bg-light border-start-0 ps-0"
-                                placeholder="Ej. Ahri, 2B, Cloud Strife...">
+                    <!-- Fila 1: Nombre y URL Imagen -->
+                    <div class="row g-3 mb-3">
+
+                        <!-- 1. Nombre (Aprovecha más espacio) -->
+                        <div class="col-md-6">
+                            <label class="form-label small text-muted fw-bold">NOMBRE DEL PERSONAJE</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0 text-purple-icon">
+                                    <i class="bi bi-person-badge"></i>
+                                </span>
+                                <input type="text" class="form-control bg-light border-start-0 ps-0"
+                                    placeholder="Ej. Ahri, 2B, Cloud Strife...">
+                            </div>
+                        </div>
+
+                        <!-- 4. URL Imagen (Movido a esta fila) -->
+                        <div class="col-md-6">
+                            <label class="form-label small text-muted fw-bold">IMAGEN DE REFERENCIA (URL)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0 text-purple-icon">
+                                    <i class="bi bi-link-45deg"></i>
+                                </span>
+                                <input type="text" class="form-control bg-light border-start-0 ps-0"
+                                    placeholder="https://...">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 2. Franquicia y Tipo (Fila) -->
+                    <!-- Fila 2: Franquicia, Tipo y Fecha Límite -->
                     <div class="row g-3 mb-3">
-                        <div class="col-md-6">
+
+                        <!-- 2a. Franquicia (Ajustado a 4 columnas) -->
+                        <div class="col-md-4">
                             <label class="form-label small text-muted fw-bold">FRANQUICIA</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-light border-end-0 text-purple-icon">
@@ -51,7 +71,9 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6">
+
+                        <!-- 2b. Tipo (Ajustado a 4 columnas) -->
+                        <div class="col-md-4">
                             <label class="form-label small text-muted fw-bold">TIPO</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-light border-end-0 text-purple-icon">
@@ -66,32 +88,20 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- 3. Fecha Límite -->
-                    <div class="mb-3">
-                        <label class="form-label small text-muted fw-bold">FECHA LÍMITE (DEADLINE)</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light border-end-0 text-purple-icon">
-                                <i class="bi bi-calendar-event"></i>
-                            </span>
-                            <input type="date" class="form-control bg-light border-start-0 ps-0">
+                        <!-- 3. Fecha Límite (Movido a esta fila y ajustado a 4 columnas) -->
+                        <div class="col-md-4">
+                            <label class="form-label small text-muted fw-bold">FECHA LÍMITE (DEADLINE)</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0 text-purple-icon">
+                                    <i class="bi bi-calendar-event"></i>
+                                </span>
+                                <input type="date" class="form-control bg-light border-start-0 ps-0">
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 4. URL Imagen -->
-                    <div class="mb-3">
-                        <label class="form-label small text-muted fw-bold">IMAGEN DE REFERENCIA (URL)</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light border-end-0 text-purple-icon">
-                                <i class="bi bi-link-45deg"></i>
-                            </span>
-                            <input type="text" class="form-control bg-light border-start-0 ps-0"
-                                placeholder="https://...">
-                        </div>
-                    </div>
-
-                    <!-- 5. Descripción -->
+                    <!-- 5. Descripción (Sigue en fila completa) -->
                     <div class="mb-4">
                         <label class="form-label small text-muted fw-bold">NOTAS / DESCRIPCIÓN</label>
                         <div class="input-group">

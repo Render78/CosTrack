@@ -4,6 +4,16 @@
     backdrop-filter: blur(4px);
     /* Efecto borroso elegante */
     z-index: 1040;
+    /* Z-Index del fondo */
+}
+
+/* IMPORTANTE: Forzamos que el diálogo esté POR ENCIMA del backdrop.
+       Como el backdrop tiene 1040, le damos 1050 al diálogo.
+    */
+.modal-dialog {
+    z-index: 1050;
+    position: relative;
+    /* Necesario para que z-index funcione correctamente */
 }
 
 /* Header Degradado */
