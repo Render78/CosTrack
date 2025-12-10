@@ -18,7 +18,7 @@
 
       <!-- Item 1: Dashboard -->
       <li>
-        <a href="#" (click)="selectItem(1); $event.preventDefault()" [class.active]="selectedItemId() === 1"
+        <a routerLink="" (click)="selectItem(1); $event.preventDefault()" [class.active]="selectedItemId() === 1"
           class="d-flex align-items-center py-3 px-3 position-relative">
           <i class="bi bi-grid-1x2-fill fs-5"></i>
           <span class="ms-3 label-text" *ngIf="!collapsed()">Dashboard</span>
@@ -28,10 +28,10 @@
 
       <!-- Item 2: Mis Cosplays -->
       <li>
-        <a href="#" (click)="selectItem(2); $event.preventDefault()" [class.active]="selectedItemId() === 2"
+        <a routerLink="/cosplay/list" (click)="selectItem(2); $event.preventDefault()" [class.active]="selectedItemId() === 2"
           class="d-flex align-items-center py-3 px-3 position-relative">
           <i class="bi bi-person-heart fs-5"></i>
-          <span class="ms-3 label-text" routerLink="/cosplay/list" *ngIf="!collapsed()">Mis Cosplays</span>
+          <span class="ms-3 label-text" *ngIf="!collapsed()">Mis Cosplays</span>
           <div class="active-indicator" *ngIf="selectedItemId() === 2"></div>
         </a>
       </li>
@@ -90,44 +90,7 @@
   <!-- CONTENIDO PRINCIPAL (Simulación para ver el efecto) -->
   <div id="content" class="flex-grow-1 p-4 p-md-5">
 
-    <!-- Navbar superior simple -->
-    <nav class="navbar navbar-light bg-light rounded shadow-sm mb-4 px-3">
-      <span class="navbar-brand mb-0 h1 text-muted">
-        Panel: {{ getActiveLabel() }}
-      </span>
-      <div class="d-flex align-items-center">
-        <div class="circle-avatar me-2">AD</div>
-        <span class="text-muted small">Admin</span>
-      </div>
-    </nav>
-
-    <!-- Tarjetas de ejemplo (Cosplay Dashboard) -->
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100 stats-card">
-          <div class="card-body">
-            <h6 class="text-uppercase text-muted mb-3">Proyectos Activos</h6>
-            <h2 class="display-4 fw-bold" style="color: var(--color-purple-main)">3</h2>
-            <div class="progress mt-3" style="height: 5px;">
-              <div class="progress-bar" role="progressbar"
-                style="width: 75%; background-color: var(--color-purple-light)"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-8">
-        <div class="card border-0 shadow-sm h-100 p-4" style="background-color: var(--color-bg-light)">
-          <h4>Próximo Evento: Comic-Con</h4>
-          <p class="text-muted">Faltan 24 días para terminar el cosplay de "Ahri".</p>
-          <button class="btn custom-btn mt-2">Ver lista de materiales</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- <app-table-list-cosplay></app-table-list-cosplay> -->
+    <router-outlet></router-outlet>
 
   </div>
 </div>
-
-<router-outlet></router-outlet>
